@@ -8,7 +8,6 @@
     * { box-sizing: border-box; }
     :root { font-family: Arial, sans-serif; color: #30304f; background: #f7f7f7; }
     body { margin: 0; }
-    /* Desktop: two columns with CSS Grid. */
     .login { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; min-height: 100svh; }
     .brand { display: grid; place-items: center; background: #0759db; color: white; padding: 40px; }
     .brand h1 { font-size: clamp(28px, 3vw, 42px); }
@@ -33,14 +32,12 @@
     .submit { justify-self: start; min-width: 170px; border: 0; border-radius: 12px; background: #0759db; color: white; padding: 16px 24px; font: inherit; font-size: 13px; cursor: pointer; margin-top: 26px; }
     .submit:hover { background: #064abb; }
     .signup { display: none; font-size: 11px; color: #858596; text-align: center; margin-top: 42px; }
-    /* Tablets: preserve the two-column layout with smaller spacing. */
     @media (min-width: 601px) and (max-width: 900px) {
       .login { grid-template-columns: 45% 55%; }
       .brand { padding: 24px; }
       .content { padding: 40px 24px; }
       .brand h1 { font-size: 28px; }
     }
-    /* Phones: hide the blue panel and use the full width for the form. */
     @media (max-width: 600px) {
       .login { grid-template-columns: 1fr; }
       .brand { display: none; }
